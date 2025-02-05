@@ -14,10 +14,12 @@ import { HttpModule } from '@nestjs/axios';
 import { HealthController } from './health/health.controller';
 import { PrismaHealthIndicator } from './health/prisma.health';
 import { TestLoggerController } from './test-logger/test-logger.controller';
+import { StripeModule } from './stripe/stripe.module';
 
 @Module({
   imports: [
     AppConfigModule,
+    StripeModule,
     CatsModule,
     PrismaModule,
     AuthModule,
